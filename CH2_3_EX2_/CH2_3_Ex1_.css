@@ -1,0 +1,39 @@
+.pingouin{
+        background-image: url("pingouin.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment: fixed;
+        background-attachment: local;
+        background-size: 110%;
+      }
+.fondrouge{
+  background-color: salmon;
+  opacity: 80%;
+  
+}
+.fondrouge1{
+  background-color: red;
+  opacity: 80%;
+  margin: 40px;
+}
+.petitpingouin{
+        background-image: url("pingouin.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed,local;
+      }
+.feuilles{
+     background-image: url("feuilles.png");
+     background-attachment: local;
+}
+.couleur{
+    color: blueviolet;
+}
+.italic{
+       font-style: italic;
+
+}
+body{
+  background-attachment: local;
+  background-color: green;
+}

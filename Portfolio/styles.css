@@ -1,0 +1,76 @@
+body{
+    
+    font-family: Arial;
+}
+
+.bardemenu {
+    background-color: #3B82F6;
+    text-align: center;
+    color: #E2E8F0;
+    background-size: 100%;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    margin: 0%;
+}
+.contenuPrincipale {
+    background-color: #1E40AF;
+    color: #E2E8F0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+
+}
+a {
+    text-decoration: none;
+    color: #E2E8F0;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+
+      .btn-custom {
+
+          display: inline-block;
+
+          padding: 0.8rem 2.2rem;
+
+          font-size: 1rem;
+
+          font-weight: 700;
+
+          text-transform: uppercase;
+
+          border-radius: 50px;
+
+          transition: all 0.3s var(--transition-timing);
+
+          box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+          border: 2px solid transparent;
+
+      }
+.footercolor{
+    background-color: #111827;
+        background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+/*         --secondary-color: #1E40AF; /* Koyu Mavi */
+
+/*          --dark-bg: #0F172A;  Çok Koyu Lacivert/Siyah */
+
+    /*      --light-text: #E2E8F0;  Açık Gri Metin */
+
+   /*        --accent-color: #D4AF37; Altın Sarısı Vurgu */
+
+   /*       --card-bg: rgba(255, 255, 255, 0.05);  Hafif Şeffaf Kart */
+
+       /*   --border-color: rgba(255, 255, 255, 0.1);  Hafif Beyaz Çerçeve */
+
+        /*  --transition-timing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          

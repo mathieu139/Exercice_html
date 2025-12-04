@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(70, 70, 70);
+    color: white;    
+}
+
+.article1{
+    background-color: rgba(0, 255, 255, 0.5);
+    border: 0.3cm dashed orange;
+    margin: 20px;
+    background-image: url(pingouin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.article2{
+    background-color: rgba(144, 238, 144, 0.5);
+    border: 0.3cm dashed orange;
+    margin: 20px;
+    background-image: url(pingouin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.article3{
+    background-color: rgba(255, 182, 193, 0.5);
+    border: 0.3cm dashed orange;
+    margin: 20px;
+    background-image: url(pingouin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+

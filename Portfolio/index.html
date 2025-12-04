@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathieu Heuberger</title>
+
+    
+
+    <!-- Tailwind CSS CDN -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+
+    <style>
+
+      /* ===== DEĞİŞKENLER VE TEMEL STİLLER ===== */
+
+      :root {
+
+          --primary-color: #3B82F6; /* Modern Mavi */
+
+          --secondary-color: #1E40AF; /* Koyu Mavi */
+
+          --dark-bg: #0F172A; /* Çok Koyu Lacivert/Siyah */
+
+          --light-text: #E2E8F0; /* Açık Gri Metin */
+
+          --accent-color: #D4AF37; /* Altın Sarısı Vurgu */
+
+          --card-bg: rgba(255, 255, 255, 0.05); /* Hafif Şeffaf Kart */
+
+          --border-color: rgba(255, 255, 255, 0.1); /* Hafif Beyaz Çerçeve */
+
+          --transition-timing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+      }
+
+      body {
+
+          font-family: 'Inter', sans-serif;
+
+          background-color: var(--dark-bg);
+
+          color: var(--light-text);
+
+          line-height: 1.6;
+
+          scroll-behavior: smooth;
+
+          overflow-x: hidden;
+
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+
+          font-family: 'Playfair Display', serif;
+
+          color: white;
+
+      }
+
+      /* ===== ANİMASYONLU ARKA PLAN ===== */
+
+      #particles-js {
+
+          position: fixed;
+
+          width: 100%;
+
+          height: 100%;
+
+          z-index: -1;
+
+          top: 0;
+
+          left: 0;
+
+          background: linear-gradient(135deg, var(--dark-bg) 0%, #1E3A8A 100%);
+
+      }
+
+      /* ===== YAPIŞKAN HEADER ===== */
+
+      .main-header.scrolled {
+
+          background-color: rgba(15, 23, 42, 0.9);
+
+          backdrop-filter: blur(12px);
+
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+
+          padding-top: 0.75rem;
+
+          padding-bottom: 0.75rem;
+
+      }
+
+      /* ===== NAVİGASYON LİNK STİLLERİ ===== */
+
+      .nav-link::after {
+
+          content: '';
+
+          position: absolute;
+
+          bottom: -5px;
+
+          left: 0;
+
+          width: 0;
+
+          height: 2px;
+
+          background-color: var(--accent-color);
+
+          transition: width 0.3s var(--transition-timing);
+
+      }
+
+      .nav-link:hover::after, .nav-link.active::after {
+
+          width: 100%;
+
+      }
+
+      
+
+      /* ===== HAMBURGER MENÜ ANİMASYONU ===== */
+
+      .hamburger-menu.active .line:nth-child(1) {
+
+          transform: translateY(9.5px) rotate(45deg);
+
+      }
+
+      .hamburger-menu.active .line:nth-child(2) {
+
+          opacity: 0;
+
+      }
+
+      .hamburger-menu.active .line:nth-child(3) {
+
+          transform: translateY(-9.5px) rotate(-45deg);
+
+      }
+
+      /* ===== TYPED.JS İMLEÇ STİLİ ===== */
+
+      .typed-cursor {
+
+          color: var(--accent-color) !important;
+
+          font-size: 1em;
+
+          opacity: 1;
+
+          animation: blink 0.7s infinite;
+
+      }
+
+      @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
+
+      /* ===== YETENEK ÇUBUĞU ANİMASYONU ===== */
+
+      .skill-progress {
+
+          width: 0;
+
+          transition: width 1.5s ease-out;
+
+      }
+
+      /* ===== BUTON STİLLERİ ===== */
+
+      .btn-custom {
+
+          display: inline-block;
+
+          padding: 0.8rem 2.2rem;
+
+          font-size: 1rem;
+
+          font-weight: 700;
+
+          text-transform: uppercase;
+
+          border-radius: 50px;
+
+          transition: all 0.3s var(--transition-timing);
+
+          box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+          border: 2px solid transparent;
+
+      }
+
+      .btn-primary-custom {
+
+          background-color: var(--primary-color);
+
+          color: white;
+
+          border-color: var(--primary-color);
+
+      }
+
+      .btn-primary-custom:hover {
+
+          background-color: var(--secondary-color);
+
+          transform: translateY(-5px);
+
+          box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
+
+      }
+
+      .btn-secondary-custom {
+
+          background-color: transparent;
+
+          color: var(--light-text);
+
+          border-color: var(--light-text);
+
+      }
+
+      .btn-secondary-custom:hover {
+
+          background-color: var(--light-text);
+
+          color: var(--dark-bg);
+
+          transform: translateY(-5px);
+
+          box-shadow: 0 15px 30px rgba(226, 232, 240, 0.3);
+
+      }
+
+      .submit-btn {
+
+            background-color: var(--primary-color);
+
+            color: white;
+
+            padding: 1rem 2.5rem;
+
+            border-radius: 50px;
+
+            transition: all 0.3s var(--transition-timing);
+
+      }
+
+      .submit-btn:hover {
+
+          background-color: var(--secondary-color);
+
+          transform: translateY(-3px);
+
+      }
+
+      /* ===== SAYFA YÜKLEYİCİ (PRELOADER) ===== */
+
+      #preloader {
+
+          position: fixed;
+
+          top: 0;
+
+          left: 0;
+
+          width: 100%;
+
+          height: 100%;
+
+          background: var(--dark-bg);
+
+          z-index: 1000;
+
+          display: flex;
+
+          justify-content: center;
+
+          align-items: center;
+
+          transition: opacity 0.5s, visibility 0.5s;
+
+      }
+
+      .loader {
+
+          width: 50px;
+
+          height: 50px;
+
+          border: 5px solid var(--border-color);
+
+          border-top-color: var(--accent-color);
+
+          border-radius: 50%;
+
+          animation: spin 1s linear infinite;
+
+      }
+
+      @keyframes spin { to { transform: rotate(360deg); } }
+
+      /* ===== KAYDIRMA ANİMASYONLARI ===== */
+
+      .reveal {
+
+          opacity: 0;
+
+          transform: translateY(50px);
+
+          transition: opacity 0.8s, transform 0.8s;
+
+      }
+
+      .reveal.visible {
+
+          opacity: 1;
+
+          transform: translateY(0);
+
+      }
+
+      /* ===== KART STİLLERİ (HİZMET, PROJE, EKİP) ===== */
+
+      .custom-card {
+
+          background-color: var(--card-bg);
+
+          backdrop-filter: blur(10px);
+
+          border: 1px solid var(--border-color);
+
+          border-radius: 12px;
+
+          overflow: hidden;
+
+          transition: all 0.3s ease;
+
+      }
+
+      .custom-card:hover {
+
+          transform: translateY(-10px);
+
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+
+          border-color: var(--accent-color);
+
+      }
+
+    </style>
+
+</head>
+
+<body class="antialiased">
+
+    <!-- Sayfa Yükleyici -->
+
+    <div id="preloader">
+
+        <div class="loader"></div>
+
+    </div>
+
+    <!-- Pensé a retirer le fond en js -->
+
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+
+    <header class="main-header fixed w-full top-0 left-0 z-50 py-4 md:py-6 px-4 md:px-8 transition-all duration-300 ease-out">
+
+        <div class="container mx-auto flex justify-between items-center">
+
+            <a href="#home" class="text-3xl font-bold text-white flex items-center">
+
+                Mathieu<span class="text-[var(--accent-color)]">.</span>
+
+
+            </a>
+
+            <!-- Masaüstü Navigasyon -->
+
+            <nav class="hidden md:flex space-x-8 lg:space-x-12">
+
+                <a href="#home" class="nav-link text-lg font-medium text-white" >Accueil</a>
+<!--  ajout compliqué dans la class              hover:text-[var(--accent-color)] transition-colors duration-300 relative
+-->
+                <a href="#about" class="nav-link text-lg font-medium text-white ">Présentation</a>
+
+                <a href="#services" class="nav-link text-lg font-medium text-white ">A propos</a>
+
+                <a href="#projects" class="nav-link text-lg font-medium text-white ">Projets</a>
+                
+                <a href="#team" class="nav-link text-lg font-medium text-white ">Stage</a>
+                
+                <a href="#contact" class="nav-link text-lg font-medium text-white ">İletişim</a>
+
+            </nav>
+
+            <!-- Mobil Hamburger Menü -->
+
+<!-- Menu quand le footer rapticie        <button id="hamburger-menu" class="md:hidden flex flex-col justify-between w-7 h-6 focus:outline-none z-50">
+
+                <span class="line block w-full h-0.5 bg-white rounded transition-all duration-300"></span>
+
+                <span class="line block w-full h-0.5 bg-white rounded transition-all duration-300"></span>
+
+                <span class="line block w-full h-0.5 bg-white rounded transition-all duration-300"></span>
+
+            </button> 
+        -->
+        </div>
+
+        <!-- Mobil Navigasyon Menüsü -->
+<!-- contenu du menu lateral
+        <div id="mobile-nav" class="fixed top-0 right-[-100%] w-3/4 h-full bg-[var(--dark-bg)] bg-opacity-95 backdrop-blur-md flex flex-col items-center justify-center transition-all duration-300 ease-in-out md:hidden z-40">
+
+            <ul class="flex flex-col space-y-8 text-center">
+
+                <li><a href="#home" class="nav-link text-2xl font-semibold text-white">Anasayfa</a></li>
+
+                <li><a href="#about" class="nav-link text-2xl font-semibold text-white">Hakkımızda</a></li>
+
+                <li><a href="#services" class="nav-link text-2xl font-semibold text-white">Hizmetler</a></li>
+
+                <li><a href="#projects" class="nav-link text-2xl font-semibold text-white">Projeler</a></li>
+
+                <li><a href="#team" class="nav-link text-2xl font-semibold text-white">Ekibimiz</a></li>
+
+                <li><a href="#contact" class="nav-link text-2xl font-semibold text-white">İletişim</a></li>
+
+            </ul>
+-->
+        </div>
+
+    </header>
+
+    <!-- Ana Sayfa (Hero) Bölümü -->
+
+    <section id="home" class="min-h-screen flex items-center py-20 px-4 md:px-8 relative z-10">
+
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+
+            <!-- Metin İçeriği -->
+
+            <div class="text-center md:text-left">
+
+                <h4 class="text-xl md:text-2xl font-medium text-[var(--primary-color)] mb-4">MİMARLIK & MÜHENDİSLİK</h4>
+
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+
+                    Hayallerinizi <br> <span id="typed-text" class="text-[var(--accent-color)]"></span>
+
+                </h1>
+
+                <p class="text-lg md:text-xl text-[var(--light-text)] mb-8">
+
+                    Estetik, fonksiyonellik ve mühendislik uzmanlığını bir araya getirerek, geleceğin yapılarını bugünden tasarlıyoruz. Vizyonunuzu gerçeğe dönüştürmek için buradayız.
+
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+
+                    <a href="#projects" class="btn-custom">Projelerimizi Keşfedin</a>
+
+                    <a href="#contact" class="btn-custom">İletişime Geçin</a>
+
+                </div>
+
+            </div>
+
+            <!-- Görsel ve Sosyal Medya Linkleri -->
+
+            <div class="relative flex justify-center md:justify-end mt-12 md:mt-0">
+
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Photo page 1" >
+                <!-- class="w-full max-w-sm md:max-w-md lg:max-w-lg h-auto rounded-3xl shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 ease-out border-4 border-[var(--card-bg)]"-->
+
+                <div class="social-links absolute bottom-4 left-1/2 -translate-x-1/2 ">
+
+                    <a href="#" class="text-xl text-white "><i class="fab fa-linkedin-in"></i></a>
+
+                    <a href="#" class="text-xl text-white "><i class="fab fa-instagram"></i></a>
+
+                    <a href="#" class="text-xl text-white"><i class="fab fa-behance"></i></a>
+
+                    <a href="#" class="text-xl text-white "><i class="fab fa-twitter"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Hakkımızda Bölümü -->
+
+    <section id="about" class="py-16 md:py-24 px-4 md:px-8 relative z-10">
+
+        <div class="container mx-auto">
+
+            <div class="text-center mb-16">
+
+                <h2 class="text-4xl md:text-5xl font-bold text-white inline-block relative pb-4">
+
+                    Hakkımızda
+
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-[var(--accent-color)] rounded-full"></span>
+
+                </h2>
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                <!-- Hakkımızda Görseli -->
+
+                <div class="relative flex justify-center md:justify-start">
+
+                    <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Mühendisler Proje Üzerinde Çalışıyor">
+
+                </div>
+
+                <!-- Hakkımızda Metni ve Yetenekler -->
+
+                <div class="text-center md:text-left">
+
+                    <h3 class="text-3xl md:text-4xl font-bold text-[var(--primary-color)] mb-6">Vizyonumuz & Misyonumuz</h3>
+
+                    <p class="text-lg text-[var(--light-text)] mb-6">
+
+                        Struktur olarak, 20 yılı aşkın deneyimle mimari, mühendislik ve müteahhitlik alanlarında entegre çözümler sunuyoruz. Her projeye, yenilikçi bir bakış açısı ve mükemmeliyetçilik ilkesiyle yaklaşıyoruz.
+
+                    </p>
+
+                    <p class="text-lg text-[var(--light-text)] mb-8">
+
+                        Sürdürülebilirlik ve teknolojiyi tasarımlarımızın merkezine koyarak, hem estetik hem de dayanıklı, zamana meydan okuyan yapılar inşa etmeyi hedefliyoruz.
+
+                    </p>
+
+                    <div class="skills-container space-y-5">
+
+                        <div class="skill-item">
+
+                            <div class="flex justify-between items-center mb-2"><span class="font-semibold text-white">Mimari Tasarım & Projelendirme</span><span class="font-bold text-[var(--accent-color)]">95%</span></div>
+
+                            <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-progress h-full bg-[var(--accent-color)] rounded-full" data-progress="95%"></div></div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="flex justify-between items-center mb-2"><span class="font-semibold text-white">İnşaat Mühendisliği & Uygulama</span><span class="font-bold text-[var(--accent-color)]">92%</span></div>
+
+                            <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-progress h-full bg-[var(--accent-color)] rounded-full" data-progress="92%"></div></div>
+
+                        </div>
+
+                        <div class="skill-item">
+
+                            <div class="flex justify-between items-center mb-2"><span class="font-semibold text-white">Proje Yönetimi & Danışmanlık</span><span class="font-bold text-[var(--accent-color)]">98%</span></div>
+
+                            <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-progress h-full bg-[var(--accent-color)] rounded-full" data-progress="98%"></div></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Hizmetler Bölümü -->
+
+    <section id="services" class="py-16 md:py-24 px-4 md:px-8 relative z-10">
+
+        <div class="container mx-auto">
+
+            <div class="text-center mb-16">
+
+                <h2 class="text-4xl md:text-5xl font-bold text-white inline-block relative pb-4">
+
+                    Hizmetlerimiz
+
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-[var(--accent-color)] rounded-full"></span>
+
+                </h2>
+
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Hizmet Kartı 1 -->
+
+                <div class="custom-card p-8 text-center flex flex-col items-center">
+
+                    <div class="text-5xl text-[var(--primary-color)] mb-6"><i class="fas fa-ruler-combined"></i></div>
+
+                    <h3 class="text-2xl font-bold text-white mb-4">Mimari Tasarım</h3>
+
+                    <p class="text-[var(--light-text)] flex-grow">Konsept geliştirmeden uygulama çizimlerine kadar, estetik ve fonksiyonel mekanlar yaratıyoruz.</p>
+
+                </div>
+
+                <!-- Hizmet Kartı 2 -->
+
+                <div class="custom-card p-8 text-center flex flex-col items-center">
+
+                    <div class="text-5xl text-[var(--primary-color)] mb-6"><i class="fas fa-hard-hat"></i></div>
+
+                    <h3 class="text-2xl font-bold text-white mb-4">İnşaat & Müteahhitlik</h3>
+
+                    <p class="text-[var(--light-text)] flex-grow">Kaliteli malzeme ve usta işçilikle, projelerinizi zamanında ve bütçenize uygun şekilde hayata geçiriyoruz.</p>
+
+                </div>
+
+                <!-- Hizmet Kartı 3 -->
+
+                <div class="custom-card p-8 text-center flex flex-col items-center">
+
+                    <div class="text-5xl text-[var(--primary-color)] mb-6"><i class="fas fa-couch"></i></div>
+
+                    <h3 class="text-2xl font-bold text-white mb-4">İç Mekan Tasarımı</h3>
+
+                    <p class="text-[var(--light-text)] flex-grow">Yaşam alanlarınızı karakterinize ve ihtiyaçlarınıza uygun, şık ve konforlu mekanlara dönüştürüyoruz.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Projeler Bölümü -->
+
+    <section id="projects" class="py-16 md:py-24 px-4 md:px-8 relative z-10 bg-[var(--card-bg)]">
+
+        <div class="container mx-auto">
+
+            <div class="text-center mb-16">
+
+                <h2 class="text-4xl md:text-5xl font-bold text-white inline-block relative pb-4">
+
+                    Öne Çıkan Projeler
+
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-[var(--accent-color)] rounded-full"></span>
+
+                </h2>
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Proje Kartı 1 -->
+
+                <a href="#" class="custom-card group">
+
+                    <div class="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Lüks Villa Projesi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+
+                    <div class="p-6"><h3 class="text-2xl font-bold text-white mb-2">Marina Vista Konutları</h3><p class="text-[var(--light-text)]">Bodrum'da modern yaşam ve doğanın birleştiği lüks villa projesi.</p></div>
+
+                </a>
+
+                <!-- Proje Kartı 2 -->
+
+                <a href="#" class="custom-card group">
+
+                    <div class="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Ofis Binası" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+
+                    <div class="p-6"><h3 class="text-2xl font-bold text-white mb-2">Nexus İş Merkezi</h3><p class="text-[var(--light-text)]">İstanbul'un kalbinde, teknoloji ve konforu birleştiren A sınıfı ofis kulesi.</p></div>
+
+                </a>
+
+                <!-- Proje Kartı 3 -->
+
+                <a href="#" class="custom-card group">
+
+                    <div class="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1613490493576-75de62addb69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Modern Konut Projesi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+
+                    <div class="p-6"><h3 class="text-2xl font-bold text-white mb-2">Vadi Park Evleri</h3><p class="text-[var(--light-text)]">İzmir'de, aileler için tasarlanmış, sosyal donatıları zengin konut kompleksi.</p></div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Ekip Bölümü -->
+
+    <section id="team" class="py-16 md:py-24 px-4 md:px-8 relative z-10">
+
+        <div class="container mx-auto">
+
+            <div class="text-center mb-16">
+
+                <h2 class="text-4xl md:text-5xl font-bold text-white inline-block relative pb-4">
+
+                    Yönetici Ekibimiz
+
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-[var(--accent-color)] rounded-full"></span>
+
+                </h2>
+
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Ekip Üyesi 1 -->
+
+                <div class="custom-card text-center p-8">
+
+                    <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Ahmet Yılmaz" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-[var(--accent-color)]">
+
+                    <h3 class="text-2xl font-bold text-white">Ahmet Yılmaz</h3>
+
+                    <p class="text-[var(--primary-color)] font-semibold mb-4">Kurucu Mimar</p>
+
+                    <p class="text-[var(--light-text)] mb-4">25 yıllık tecrübesiyle şirketimizin vizyonunu belirleyen liderimiz.</p>
+
+                    <div class="flex justify-center gap-4 text-xl"><a href="#" class="text-gray-400 hover:text-[var(--accent-color)]"><i class="fab fa-linkedin-in"></i></a><a href="#" class="text-gray-400 hover:text-[var(--accent-color)]"><i class="fab fa-twitter"></i></a></div>
+
+                </div>
+
+                <!-- Ekip Üyesi 2 -->
+
+                <div class="custom-card text-center p-8">
+
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Mehmet Kaya" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-[var(--accent-color)]">
+
+                    <h3 class="text-2xl font-bold text-white">Mehmet Kaya</h3>
+
+                    <p class="text-[var(--primary-color)] font-semibold mb-4">Proje Direktörü</p>
+
+                    <p class="text-[var(--light-text)] mb-4">İnşaat mühendisliği alanındaki uzmanlığıyla projelerimizin bel kemiği.</p>
+
+                    <div class="flex justify-center gap-4 text-xl"><a href="#" class="text-gray-400 hover:text-[var(--accent-color)]"><i class="fab fa-linkedin-in"></i></a></div>
+
+                </div>
+
+                <!-- Ekip Üyesi 3 -->
+
+                <div class="custom-card text-center p-8">
+
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Zeynep Öztürk" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-[var(--accent-color)]">
+
+                    <h3 class="text-2xl font-bold text-white">Zeynep Öztürk</h3>
+
+                    <p class="text-[var(--primary-color)] font-semibold mb-4">Baş Mimar</p>
+
+                    <p class="text-[var(--light-text)] mb-4">Yaratıcı ve yenilikçi tasarımlarıyla projelerimize hayat veren isim.</p>
+
+                    <div class="flex justify-center gap-4 text-xl"><a href="#" class="text-gray-400 hover:text-[var(--accent-color)]"><i class="fab fa-linkedin-in"></i></a><a href="#" class="text-gray-400 hover:text-[var(--accent-color)]"><i class="fab fa-behance"></i></a></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- İletişim Bölümü -->
+
+    <section id="contact" class="py-16 md:py-24 px-4 md:px-8 relative z-10">
+
+        <div class="container mx-auto">
+
+            <div class="text-center mb-16">
+
+                <h2 class="text-4xl md:text-5xl font-bold text-white inline-block relative pb-4">
+
+                    İletişime Geçin
+
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-[var(--accent-color)] rounded-full"></span>
+
+                </h2>
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+                <!-- İletişim Bilgileri -->
+
+                <div class="flex flex-col gap-8">
+
+                    <div class="flex items-start gap-6 bg-[var(--card-bg)] p-6 rounded-2xl border border-[var(--border-color)]">
+
+                        <i class="fas fa-map-marker-alt text-3xl text-[var(--primary-color)]"></i>
+
+                        <div><h3 class="text-2xl font-bold text-white mb-2">Adres</h3><p class="text-lg text-gray-300">Maslak, İstanbul</p></div>
+
+                    </div>
+
+                    <div class="flex items-start gap-6 bg-[var(--card-bg)] p-6 rounded-2xl border border-[var(--border-color)]">
+
+                        <i class="fas fa-envelope text-3xl text-[var(--primary-color)]"></i>
+
+                        <div><h3 class="text-2xl font-bold text-white mb-2">E-posta</h3><p class="text-lg text-gray-300">info@struktur.com</p></div>
+
+                    </div>
+
+                    <div class="flex items-start gap-6 bg-[var(--card-bg)] p-6 rounded-2xl border border-[var(--border-color)]">
+
+                        <i class="fas fa-phone-alt text-3xl text-[var(--primary-color)]"></i>
+
+                        <div><h3 class="text-2xl font-bold text-white mb-2">Telefon</h3><p class="text-lg text-gray-300">+90 (212) 555 1234</p></div>
+
+                    </div>
+
+                </div>
+
+                
+
+                <!-- İletişim Formu -->
+
+                <div class="bg-[var(--card-bg)] p-8 rounded-2xl border border-[var(--border-color)]">
+
+                    <h3 class="text-3xl font-bold text-white mb-8 text-center">Projeniz Hakkında Konuşalım</h3>
+
+                    <form id="contact-form" class="space-y-6">
+
+                        <input type="text" placeholder="Adınız Soyadınız" class="w-full px-5 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-[var(--primary-color)] transition-colors" required>
+
+                        <input type="email" placeholder="E-posta Adresiniz" class="w-full px-5 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-[var(--primary-color)] transition-colors" required>
+
+                        <input placeholder="Mesajınız" rows="5" class="w-full px-5 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-[var(--primary-color)] transition-colors resize-y" required/>
+
+                        <button type="submit" class="submit-btn w-full font-bold">Mesajı Gönder</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="bg-gray-900 py-12 px-4 md:px-8 relative z-10">
+
+        <div class="container mx-auto text-center">
+
+            <a href="#home" class="text-4xl font-bold text-white mb-6 inline-block">Struktur<span class="text-[var(--accent-color)]">.</span></a>
+
+            <div class="flex justify-center gap-6 text-2xl mb-8">
+
+                <a href="#" class="text-gray-300 hover:text-[var(--accent-color)] transition-colors"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="#" class="text-gray-300 hover:text-[var(--accent-color)] transition-colors"><i class="fab fa-instagram"></i></a>
+
+                <a href="#" class="text-gray-300 hover:text-[var(--accent-color)] transition-colors"><i class="fab fa-behance"></i></a>
+
+                <a href="#" class="text-gray-300 hover:text-[var(--accent-color)] transition-colors"><i class="fab fa-twitter"></i></a>
+
+            </div>
+
+            <p class="text-gray-500 text-sm">© 2024 Struktur Mimarlık & Mühendislik. Tüm Hakları Saklıdır.</p>
+
+        </div>
+
+    </footer>
+
+    <!-- Yukarı Çık Butonu -->
+
+    <button id="scroll-top-btn" class="fixed bottom-8 right-8 w-14 h-14 bg-[var(--primary-color)] text-white rounded-full flex items-center justify-center text-2xl shadow-lg opacity-0 invisible transition-all z-50 hover:bg-[var(--secondary-color)] hover:scale-110">
+
+        <i class="fas fa-arrow-up"></i>
+
+    </button>
+
+    <!-- Scriptler -->
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+
+        // Sayfa Yükleyici
+
+        window.addEventListener('load', () => {
+
+            document.getElementById('preloader').style.opacity = '0';
+
+            document.getElementById('preloader').style.visibility = 'hidden';
+
+        });
+
+        // Mobil Navigasyon
+
+        const hamburger = document.getElementById('hamburger-menu');
+
+        const mobileNav = document.getElementById('mobile-nav');
+
+        mobileNav.querySelectorAll('.nav-link').forEach(link => {
+
+            link.addEventListener('click', () => {
+
+                mobileNav.classList.remove('right-0');
+
+                mobileNav.classList.add('right-[-100%]');
+
+                hamburger.classList.remove('active');
+
+            });
+
+        });
+
+        hamburger.addEventListener('click', () => {
+
+            mobileNav.classList.toggle('right-[-100%]');
+
+            mobileNav.classList.toggle('right-0');
+
+            hamburger.classList.toggle('active');
+
+        });
+
+        // Yapışkan Header
+
+        window.addEventListener('scroll', () => {
+
+            document.querySelector('.main-header').classList.toggle('scrolled', window.scrollY > 80);
+
+        });
+
+        // Yukarı Çık Butonu
+
+        const scrollTopBtn = document.getElementById('scroll-top-btn');
+
+        window.addEventListener('scroll', () => {
+
+            if (window.pageYOffset > 500) {
+
+                scrollTopBtn.classList.add('opacity-100', 'visible');
+
+            } else {
+
+                scrollTopBtn.classList.remove('opacity-100', 'visible');
+
+            }
+
+        });
+
+        scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Typed.js Animasyonu
+
+        if (document.getElementById('typed-text')) {
+
+            new Typed("#typed-text", {
+
+                strings: ["İnşa Ediyoruz", "Tasarlıyoruz", "Yönetiyoruz", "Danışmanlık Veriyoruz"],
+
+                typeSpeed: 60,
+
+                backSpeed: 45,
+
+                loop: true
+
+            });
+
+        }
+
+        // Yetenek Çubukları Animasyonu
+
+        const skillObserver = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    document.querySelectorAll('.skill-progress').forEach(bar => {
+
+                        bar.style.width = bar.dataset.progress + '%';
+
+                    });
+
+                    skillObserver.unobserve(entry.target);
+
+                }
+
+            });
+
+        }, { threshold: 0.3 });
+
+        if (document.getElementById('about')) {
+
+            skillObserver.observe(document.getElementById('about'));
+
+        }
+
+        // İletişim Formu
+
+        document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+
+            e.preventDefault();
+
+            // Burada form gönderme işlemleri yapılabilir.
+
+            alert('Mesajınız için teşekkürler! En kısa sürede geri dönüş yapacağız.');
+
+            e.target.reset();
+
+        });
+
+        // Kaydırma ile Aktif Link Vurgulama
+
+        const sections = document.querySelectorAll('section[id]');
+
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+
+            let current = '';
+
+            sections.forEach(section => {
+
+                const sectionTop = section.offsetTop - 100;
+
+                if (pageYOffset >= sectionTop) {
+
+                    current = section.getAttribute('id');
+
+                }
+
+            });
+
+            navLinks.forEach(link => {
+
+                link.classList.remove('active');
+
+                if (link.getAttribute('href') === `#${current}`) {
+
+                    link.classList.add('active');
+
+                }
+
+            });
+
+        });
+
+        // Kaydırma Animasyonları
+
+        const revealObserver = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+
+            });
+
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        
+
+        // Particles.js Ayarları
+
+        particlesJS("particles-js", {
+
+            "particles": {
+
+                "number": {"value": 60, "density": {"enable": true, "value_area": 800}},
+
+                "color": {"value": "#D4AF37"},
+
+                "shape": {"type": "circle"},
+
+                "opacity": {"value": 0.4, "random": true},
+
+                "size": {"value": 2, "random": true},
+
+                "line_linked": {"enable": true, "distance": 150, "color": "#D4AF37", "opacity": 0.2, "width": 1},
+
+                "move": {"enable": true, "speed": 1, "direction": "none", "out_mode": "out"}
+
+            },
+
+            "interactivity": {
+
+                "detect_on": "canvas",
+
+                "events": {"onhover": {"enable": true, "mode": "grab"}, "onclick": {"enable": false}},
+
+                "modes": {"grab": {"distance": 140, "line_linked": {"opacity": 0.5}}}
+
+            },
+
+            "retina_detect": true
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+
+            

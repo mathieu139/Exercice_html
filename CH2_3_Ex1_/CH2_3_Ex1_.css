@@ -1,0 +1,17 @@
+.pingouin{
+        background-image: url("pingouin.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment: fixed;
+      }
+.feuilles{
+     background-image: url("feuilles.png");
+     background-attachment: local;
+}
+.couleur{
+    color: blueviolet;
+}
+.italic{
+       font-style: italic;
+
+}

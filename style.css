@@ -1,0 +1,71 @@
+.titre {
+    font-size: 20px;
+     font-family: Arial;
+     text-align : center;
+    color : red;
+     background-color: lightgoldenrodyellow;
+}
+
+.ligne2 {
+     font-family: Arial;
+     text-align : center;
+    color : purple;
+     font-size : 16px;
+    margin-top:20px
+}
+
+.ligne3 {
+    font-size: 16px;
+     font-family: Arial;
+     text-align : center;
+    color : purple;
+    margin-bottom:20px
+}
+
+.texte_qui_suivent{
+    
+    text-indent : 20px;
+    font-size: 11px;
+    font-family: Arial;
+    margin-bottom:25px;
+    margin-top:25px;
+}
+
+.lignesuméroté123{
+    font-size: 15px;
+     font-family: Arial;
+     color : blue;
+     font-weight : bold;
+}
+.Decette{
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom:20px;
+    margin-top:10px;
+    font-weight : italic;
+    margin-left: 1cm;
+    margin-right: 1cm;
+}
+
+.soustitre{
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+.precedenttitre{
+    margin-bottom:20px;
+    margin-top:10px;
+     text-indent:12px; 
+}
+
+.specialitalique{
+    font-weight : italic;
+    margin-bottom:20px;
+    margin-top:10px;
+}
+
+.paragraphe4{
+     margin-bottom:20px;
+    margin-top:10px;
+    color : rgb(103, 166, 187);
+}
