@@ -2,26 +2,9 @@ body{
     
     font-family: Arial;
 }
-
-.bardemenu {
-    background-color: #3B82F6;
+h2{
+    color: #E2E8F0;
     text-align: center;
-    color: #E2E8F0;
-    background-size: 100%;
-    padding: 15px;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-attachment: fixed;
-    margin: 0%;
-}
-.contenuPrincipale {
-    background-color: #1E40AF;
-    color: #E2E8F0;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-attachment: fixed;
-
 }
 a {
     text-decoration: none;
@@ -29,29 +12,73 @@ a {
     font-weight: bold;
     font-family: sans-serif;
 }
+img{
+    border-radius: 12px;
+}
+.bardemenu {
+    background-color: #3B82F6;
+    text-align: center;
+    color: #E2E8F0;
+    background-size: 100%;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    margin: 0%;
+}
+.contenuPrincipale {
+    background-image: url('High Quality 4k Wallpaper For.jpg');
+    color: #E2E8F0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+   /* background: linear-gradient(to bottom, #3B82F6, #1E40AF);
+*/
+}
 
 
-      .btn-custom {
 
-          display: inline-block;
+.btn-custom {
+    display: inline-block;
+    padding: 0.8rem 2.2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s var(--transition-timing);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 2px solid transparent;
+    /* background-color: var(--card-bg);
+*/
+          backdrop-filter: blur(10px);
+/*
+          border: 1px solid var(--border-color);
+*/
+          border-radius: 12px;
 
-          padding: 0.8rem 2.2rem;
+          overflow: hidden;
 
-          font-size: 1rem;
+          transition: all 0.3s ease;
+    width: 425px;
+    height: 285px ;
+}
+.btn-custom:hover {
 
-          font-weight: 700;
+    background-color: #1e40af59;
+    color: #E2E8F0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transform: translateY(-3px);
+    border-color: #D4AF37;
 
-          text-transform: uppercase;
 
-          border-radius: 50px;
+              transform: translateY(-10px);
 
-          transition: all 0.3s var(--transition-timing);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 
-          box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+          border-color: var(--accent-color);
 
-          border: 2px solid transparent;
-
-      }
+}
 .footercolor{
     background-color: #111827;
         background-size: 100%;
@@ -60,6 +87,10 @@ a {
     background-attachment: fixed;
     background-position: bottom;
 }
+.align-center {
+    text-align: center;
+}  
+
 /*         --secondary-color: #1E40AF; /* Koyu Mavi */
 
 /*          --dark-bg: #0F172A;  Çok Koyu Lacivert/Siyah */
@@ -73,4 +104,86 @@ a {
        /*   --border-color: rgba(255, 255, 255, 0.1);  Hafif Beyaz Çerçeve */
 
         /*  --transition-timing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          
+*/
+/*.btn3 {
+  position: relative;
+  display: inline-grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  width: 160px;
+  height: 40px;
+  border: 1px solid #444;
+  background: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  font: 600 16px system-ui, sans-serif;
+}*/
+
+.text {
+  display: grid;
+  place-items: center;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+.text-default { 
+  grid-area: 1 / 1; 
+}
+
+.text-hover { 
+  grid-area: 1 / 1; 
+  transform: translateY(100%); 
+  opacity: 0%; 
+}
+
+.btn-custom:hover .text-default {
+  transform: translateY(-100%);
+  opacity: 0%;
+  
+}
+
+.btn-custom:hover .text-hover {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.btn-custom-contact {
+    display: inline-block;
+    padding: 0.8rem 2.2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s var(--transition-timing);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 2px solid transparent;
+    /* background-color: var(--card-bg);
+*/
+          backdrop-filter: blur(10px);
+/*
+          border: 1px solid var(--border-color);
+*/
+          border-radius: 12px;
+
+          overflow: hidden;
+
+          transition: all 0.3s ease;
+}
+.btn-custom-contact:hover {
+
+    background-color: #1e40af59;
+    color: #E2E8F0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transform: translateY(-3px);
+    border-color: #D4AF37;
+
+
+              transform: translateY(-10px);
+
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+
+          border-color: var(--accent-color);
+
+}
+
+
+

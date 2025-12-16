@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBLEB | Holographic</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background Elements -->
+    <div class="noise-overlay"></div>
+    <div class="holo-gradient-orb orb-1"></div>
+    <div class="holo-gradient-orb orb-2"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-logo">WEBLEB</div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Start</a></li>
+            <li><a href="#about">Identity</a></li>
+            <li><a href="#work">Projects</a></li>
+            <li><a href="#contact">Signal</a></li>
+        </ul>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="glitch-wrapper">
+                <h1 class="hero-title glitch" data-text="WEBLEB">WEBLEB</h1>
+            </div>
+            <p class="hero-subtitle">Creative Developer & UI Engineer</p>
+            <div class="hero-cta">
+                <a href="#work" class="btn-holo">View Work <div class="btn-shine"></div></a>
+                <a href="#contact" class="btn-outline">Contact <div class="btn-shine"></div></a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="holo-card">
+                <div class="code-snippet">
+                    <pre><code>
+class Developer {
+  constructor() {
+    this.vision = "Infinite";
+    this.stack = "Full";
+  }
+  
+  create() {
+    return new Future();
+  }
+}
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Identity_Protocol</h2>
+            <div class="about-grid">
+                <div class="about-card glass-card">
+                    <i class="fas fa-user-astronaut card-icon"></i>
+                    <h3>The Pilot</h3>
+                    <p>Passionate about crafting digital experiences that blend aesthetic beauty with high-performance
+                        code. I build accessible, pixel-perfect interfaces.</p>
+                </div>
+                <div class="about-card glass-card">
+                    <i class="fas fa-layer-group card-icon"></i>
+                    <h3>The Stack</h3>
+                    <ul class="stack-list">
+                        <li>JavaScript (ES6+)</li>
+                        <li>React / Vue</li>
+                        <li>Node.js</li>
+                        <li>WebGL / Three.js</li>
+                        <li>CSS3 / SASS</li>
+                    </ul>
+                </div>
+                <div class="about-card glass-card">
+                    <i class="fas fa-bolt card-icon"></i>
+                    <h3>The Vision</h3>
+                    <p>To redefine the web through immersive interactions and futuristic design patterns. Always
+                        learning, always evolving.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="section">
+        <div class="container">
+            <h2 class="section-title">Deployed_Systems</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img color-1"></div>
+                        <div class="overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Neon Dashboard</h3>
+                        <p>A high-performance analytics dashboard with real-time data visualization.</p>
+                        <div class="tags">
+                            <span>React</span>
+                            <span>D3.js</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img color-2"></div>
+                        <div class="overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Cyber Commerce</h3>
+                        <p>Next-gen e-commerce platform featuring 3D product previews.</p>
+                        <div class="tags">
+                            <span>Three.js</span>
+                            <span>Shopify API</span>
+                            <span>GSAP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img color-3"></div>
+                        <div class="overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Chat Interface</h3>
+                        <p>Minimalist chat UI with natural language processing integration.</p>
+                        <div class="tags">
+                            <span>OpenAI API</span>
+                            <span>Next.js</span>
+                            <span>Tailwind</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Transmit_Signal</h2>
+            <div class="contact-wrapper glass-panel">
+                <form class="contact-form">
+                    <div class="input-group">
+                        <input type="text" id="name" required placeholder=" ">
+                        <label for="name">Identifier (Name)</label>
+                        <div class="input-highlight"></div>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">Return Address (Email)</label>
+                        <div class="input-highlight"></div>
+                    </div>
+                    <div class="input-group">
+                        <input id="message" required placeholder=" " rows="5"/>
+                        <label for="message">Data Packet (Message)</label>
+                        <div class="input-highlight"></div>
+                    </div>
+                    <button type="submit" class="btn-holo submit-btn">Send Transmission</button>
+                </form>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 DEV.IO // SYSTEM_ONLINE</p>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>            
