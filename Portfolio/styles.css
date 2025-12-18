@@ -1,24 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
 body{
     
-    font-family: Arial;
+    font-family: 'Zalando Sans', sans-serif;
 }
-h2{
-    color: #E2E8F0;
+h2, h1{
+    color: #cad2c5;
     text-align: center;
-}
+    font-family: 'DM Serif Text', serif;
+}    
+
+
 a {
     text-decoration: none;
-    color: #E2E8F0;
+    color: #CAD2C5;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: 'Zalando Sans', sans-serif;
 }
 img{
     border-radius: 12px;
 }
 .bardemenu {
-    background-color: #3B82F6;
+    background-color: #2F3D46;
     text-align: center;
-    color: #E2E8F0;
+    color: #CAD2C5;
     background-size: 100%;
     padding: 0px;
     background-repeat: no-repeat;
@@ -27,8 +32,9 @@ img{
     margin: 0%;
 }
 .contenuPrincipale {
-    background-image: url('High Quality 4k Wallpaper For.jpg');
-    color: #E2E8F0;
+    background-color: #354E52;
+    /* background-image: url('High Quality 4k Wallpaper For.jpg'); */
+    color: #CAD2C5;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: top;
@@ -65,11 +71,11 @@ img{
 }
 .btn-custom:hover {
 
-    background-color: #1e40af59;
+    background-color: #527970;
     color: #E2E8F0;
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     transform: translateY(-3px);
-    border-color: #D4AF37;
+    border-color: #354E52;
 
 
               transform: translateY(-10px);
@@ -80,7 +86,7 @@ img{
 
 }
 .footercolor{
-    background-color: #111827;
+    background-color: #2F3D46;
         background-size: 100%;
     background-repeat: no-repeat;
     background-position: top;
@@ -126,7 +132,7 @@ img{
 }
 
 .text-default { 
-  grid-area: 1 / 1; 
+  grid-area: 1 / 1;
 }
 
 .text-hover { 
@@ -170,11 +176,11 @@ img{
 }
 .btn-custom-contact:hover {
 
-    background-color: #1e40af59;
+    background-color: #527970;
     color: #E2E8F0;
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     transform: translateY(-3px);
-    border-color: #D4AF37;
+    border-color: #354E52;
 
 
               transform: translateY(-10px);
@@ -184,6 +190,31 @@ img{
           border-color: var(--accent-color);
 
 }
+.Nvbtn{
+        display: inline-block;
+    padding: 0.8rem 2.2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s var(--transition-timing);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 2px solid transparent;
+    /* background-color: var(--card-bg);
+*/
+    backdrop-filter: blur(10px);
+/*
+          border: 1px solid var(--border-color);
+*/
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.Nvbtn:hover {
 
-
-
+    background-color: #527970;
+    color: #E2E8F0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transform: translateY(-3px);
+    border-color: #354E52;
+}
